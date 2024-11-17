@@ -30,4 +30,4 @@ const DeleteRecipeButton = ({ recipeId }) => {
   return <button onClick={handleDelete}>Delete Recipe</button>;
 };
 
-export { RecipeDetails, DeleteRecipeButton };
+export default { RecipeDetails, DeleteRecipeButton };
