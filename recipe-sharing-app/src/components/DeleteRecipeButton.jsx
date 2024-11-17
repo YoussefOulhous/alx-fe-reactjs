@@ -1,13 +1,17 @@
-import React from "react";
-import { useRecipeStore } from "./recipeStore";
+import React from 'react';
+import { useRecipeStore } from './recipeStore';
+import { useNavigate } from 'react-router-dom';
 
-
-const DeleteRecipeButton = ({ recipeId }) => {
+const DeleteRecipeButton = ({ id }) => {
   const deleteRecipe = useRecipeStore((state) => state.deleteRecipe);
+  const navigate = useNavigate();
 
-  return (
-    <button onClick={() => deleteRecipe(recipeId)}>Delete</button>
-  );
+  const handleDelete = () => {
+    deleteRecipe(id); // Delete the recipe
+    navigate('/'); // Navigate back to the home page or another route
+  };
+
+  return <button onClick={handleDelete}>Delete Recipe</button>;
 };
 
-export  { DeleteRecipeButton };
+export default {DeleteRecipeButton};
