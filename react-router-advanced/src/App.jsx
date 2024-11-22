@@ -2,7 +2,7 @@ import React from 'react'
 import {BrowserRouter as Router , Routes , Route } from "react-router-dom";
 import Profile from './components/Profile';
 import ProfileDetails from './components/ProfileDetails';
-import ProfileSetting from './components/ProfileSetting';
+import ProfileSetting from './components/ProfileSettings';
 import Home from './components/Home';
 import BlogList from './components/BlogList';
 import BlogPost from './components/BlogPost';
