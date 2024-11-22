@@ -9,20 +9,12 @@ function RegistrationForm () {
 
     const handleSubmit = (e) => { e.preventDefault() ;
 
-    if(!username) {
+    if(!username || !email || !password) {
         setErrors('please check if you enter all you infos !!')
         return ;
     } 
 
-    if(!email) {
-        setErrors('please check if you enter all you infos !!')
-        return ;
-    } 
-
-    if(!password) {
-        setErrors('please check if you enter all you infos !!')
-        return ;
-    } 
+    
 
     setErrors(""); 
     alert(`Form submitted: Name: ${username}, Email: ${email}`);
