@@ -10,10 +10,10 @@ function PostsComponent () {
         return res.json();
     };
     
-        const {data, error , isLoading , refetch} = useQuery('posts', fetchPosts);
+        const {data, isError , isLoading , refetch} = useQuery('posts', fetchPosts);
 
         if(isLoading) return <div>Loading...</div>
-        if(error) return <div>error loading data.</div>
+        if(isError) return <div>error loading data.</div>
 
         return(
             <>
