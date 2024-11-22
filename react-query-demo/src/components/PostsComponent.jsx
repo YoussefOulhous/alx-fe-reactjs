@@ -15,6 +15,8 @@ function PostsComponent () {
         if(isLoading) return <div>Loading...</div>
         if(isError) return <div>error loading data.</div>
 
+        // cacheTime, staleTime, refetchOnWindowFocus, keepPreviousData
+
         return(
             <>
             <h1>Posts</h1>
