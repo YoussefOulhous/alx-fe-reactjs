@@ -1,6 +1,9 @@
 import {Link,Outlet} from "react-router-dom";
 import React from "react";
 import { Profiler } from "react";
+import { Route ,Routes ,Router } from "react-router-dom";
+import ProfileDetails from "./ProfileDetails";
+import ProfileSetting from "./ProfileSetting";
 
 
 
