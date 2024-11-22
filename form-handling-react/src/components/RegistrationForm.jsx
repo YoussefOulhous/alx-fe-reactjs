@@ -5,26 +5,26 @@ function RegistrationForm () {
     const [username,setusername] = useState('');
     const [email,setemail] = useState('');
     const [password,setpassword] = useState('');
-    const [error,setError] = useState('')
+    const [errors,setErrors] = useState('')
 
     const handleSubmit = (e) => { e.preventDefault() ;
 
     if(!username  ) {
-        setError('please check if you enter all you infos !!')
+        setErrors('please check if you enter all you infos !!')
         return ;
     } 
 
     if( !email ) {
-        setError('please check if you enter all you infos !!')
+        setErrors('please check if you enter all you infos !!')
         return ;
     } 
 
     if( !password ) {
-        setError('please check if you enter all you infos !!')
+        setErrors('please check if you enter all you infos !!')
         return ;
     } 
 
-    setError(""); 
+    setErrors(""); 
     alert(`Form submitted: Name: ${username}, Email: ${email}`);
     
   };
@@ -34,13 +34,13 @@ function RegistrationForm () {
         <>
         <form onSubmit={handleSubmit}>
 
-        {error && <p style={{color:'red'}}>{error}</p>}
+        {errors && <p style={{color:'red'}}>{errors}</p>}
             
             <label>Name :</label>
             <input type="text" 
                 value={username}
                 
-                onChange={(e) => setname(e.target.value)} 
+                onChange={(e) => setusername(e.target.value)} 
              />
 
             <label>Email :</label>
