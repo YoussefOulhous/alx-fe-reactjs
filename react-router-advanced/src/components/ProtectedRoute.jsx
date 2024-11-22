@@ -2,6 +2,16 @@ import React from 'react'
 import { Navigate } from 'react-router-dom'
 
 function ProtectedRoute() {
+
+    // const useAuth = () => {
+    //     const [isAuthenticated, setIsAuthenticated] = useState(false);
+      
+    //     const login = () => setIsAuthenticated(true);
+    //     const logout = () => setIsAuthenticated(false);
+      
+    //     return { isAuthenticated, login, logout };
+    // };
+
     const ProtectedRoute = ({isAuthenticated , children }) => {
         if(!isAuthenticated){
             return <Navigate to='/profile' />
@@ -15,4 +25,4 @@ function ProtectedRoute() {
  
 }
 
-export default ProtectedRoute
+export default ProtectedRoute ;
