@@ -7,8 +7,10 @@ function AddRecipeForm({addRecipes}) {
     const [ingredients , setingredients] = useState('');
     const [ preparition , setpreparition ] = useState('') ;
 
+    //validate", "errors", "setErrors", "preventDefault
+
     const handleSubmit = (e) => {
-        e.prevetDefault;
+        e.preventDefault;
 
         const newrecipe = {
             title,
