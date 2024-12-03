@@ -24,7 +24,7 @@ function RecipeDetail() {
 
   // Return the recipe details layout
   return (
-    <div className="p-6 max-w-3xl mx-auto">
+    <div className="p-6 max-w-3xl mx-auto shadow">
       <h1 className="text-2xl font-bold mb-4">{recipe.title}</h1>
       <img
         src={recipe.image}

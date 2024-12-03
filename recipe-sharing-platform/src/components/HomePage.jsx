@@ -13,7 +13,7 @@ function HomePage() {
 
   return (
     <div className='w-1/2 mx-auto'>
-        <h1 className='text-4xl font-bold text-center p-5 text-blue-700'>Recipes List !</h1>
+        <h1 className='text-4xl font-bold text-center p-5 text-blue-700 sm:text-3xl'>Recipes List !</h1>
         <div className='grid grid-cols-3 md:grid-cols-1 lg:grid-cols-2 gap-4 p-4'>
             {recipes.map((recipe) => (
                 <div key={recipe.id} className='border rounded-lg shadow-md p-4 flex flex-col items-center bg-white'>
