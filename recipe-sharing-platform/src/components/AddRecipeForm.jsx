@@ -7,7 +7,7 @@ function AddRecipeForm({addRecipes}) {
     const [ingredients , setingredients] = useState('');
     const [ preparition , setpreparition ] = useState('') ;
 
-    const handletheAdd = (e) => {
+    const handleSubmit = (e) => {
         e.prevetDefault;
 
         const newrecipe = {
@@ -50,7 +50,7 @@ function AddRecipeForm({addRecipes}) {
             
         </div>
 
-        <button onClick={handletheAdd} className='w-36 h-14 bg-red-600 text-white border-2 border-black rounded-md block mx-auto font-semibold hover:bg-red-500 delay-75 duration-100'>Add the recipe !</button>
+        <button role='Submit' onSubmit={handleSubmit} className='w-36 h-14 bg-red-600 text-white border-2 border-black rounded-md block mx-auto font-semibold hover:bg-red-500 delay-75 duration-100'>Add the recipe !</button>
     </div>
   )
 }
