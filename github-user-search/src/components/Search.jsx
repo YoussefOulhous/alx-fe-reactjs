@@ -41,6 +41,7 @@ function SearchInput() {
         
         
         <div>
+            {/* login */}
             {loading && <p>Loading...</p>}
             {error && <p>Looks like we cant find the user</p>}
             {userData && (
