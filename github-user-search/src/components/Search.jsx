@@ -32,10 +32,14 @@ function SearchInput() {
 
   return (
     <div className='p-10 mx-auto w-1/4 border-2 rounded-sm border-gray-700 mt-8 h-auto '>
-        <h1 className='text-3xl font-semibold   text-blue-600'>Github search :</h1>
-        <input type="text" value={username} onChange={(e)=>{ Setusername(e.target.value) }}  placeholder='Search !'  className='w-52 h-10 p-4  border-2 rounded-md border-black  mt-8'/>
-        <button onClick={handleSearch} className='w-32 h-10 border rounded-md mt-6 text-xl text-white  bg-green-600'>Search</button>
-
+        <form action="">
+            <h1 className='text-3xl font-semibold   text-blue-600'>Github search :</h1>
+            <input type="text" value={username} onChange={(e)=>{ Setusername(e.target.value) }}  placeholder='Search !'  className='w-52 h-10 p-4  border-2 rounded-md border-black  mt-8'/>
+            <button onClick={handleSearch} className='w-32 h-10 border rounded-md mt-6 text-xl text-white  bg-green-600'>Search</button>
+            {/* onSubmit */}
+        </form>
+        
+        
         <div>
             {loading && <p>Loading...</p>}
             {error && <p>Looks like we cant find the user</p>}
