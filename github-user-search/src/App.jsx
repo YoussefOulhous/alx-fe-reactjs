@@ -1,6 +1,6 @@
 import React from 'react'
 import './index.css'
-import SearchInput from './components/SearchInput'
+import SearchInput from './components/Search'
 import { fetchUserData } from './services/githubService'
 
 
