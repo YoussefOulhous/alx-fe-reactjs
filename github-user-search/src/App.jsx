@@ -9,7 +9,7 @@ function App() {
   const testFetching = async() =>{
     try{
       const Userdata = await fetchUserData('octact');
-      console.log( Userdata)
+      
     } catch(error){
       console.error("Something went wrong:", error)
     }

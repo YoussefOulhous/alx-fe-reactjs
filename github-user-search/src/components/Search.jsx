@@ -1,6 +1,6 @@
 import React , {useState} from 'react'
-import { fetchUsersByCriteria } from '../services/githubService';
-
+import { fetchUserData } from '../services/githubService';
+import { fetchUsersByCriteria } from '../services/fetcheDataUser';
 
 
 
@@ -30,8 +30,6 @@ function SearchInput() {
         } finally{
             setLoading(false);
         }
-
-        // {fetchUserData}
         
     }
 
@@ -55,7 +53,7 @@ function SearchInput() {
                         return(
 
                             <div key={user.id}>
-                                <img src={user.avatar_url} alt={user.login} />
+                                <img src={user.avatar_url} alt={user.login}  className='w-32'/>
                                 <h2>{user.name || 'No Name'}</h2>
                                 <a href={user.html_url}>Link to the profile </a>
                             </div>
