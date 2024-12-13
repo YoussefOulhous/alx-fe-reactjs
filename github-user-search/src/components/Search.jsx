@@ -1,6 +1,6 @@
 import React , {useState} from 'react'
-import { fetchUserData } from '../services/githubService';
-import { fetchUsersByCriteria } from '../services/fetcheDataUser';
+import { fetchUsersByCriteria } from '../services/githubService';
+
 
 
 
