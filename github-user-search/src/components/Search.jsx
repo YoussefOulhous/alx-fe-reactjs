@@ -30,6 +30,8 @@ function SearchInput() {
         } finally{
             setLoading(false);
         }
+
+        // {fetchUserData}
         
     }
 
