@@ -17,4 +17,6 @@ export const fetchUsersByCriteria  = async (query) => {
         console.error("Error fetching users by criteria:", error.message);
         throw error ;
     }
+
+    // "https://api.github.com/search/users?q", "location", "minRepos"
 }
