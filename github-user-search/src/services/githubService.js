@@ -1,4 +1,5 @@
 import axios from "axios";
+import { fetchUsersByCriteria } from "./fetcheDataUser";
 
 export const fetchUserData =async (username) => {
     try{

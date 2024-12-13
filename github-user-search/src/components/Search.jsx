@@ -1,5 +1,6 @@
 import React , {useState} from 'react'
 import { fetchUserData } from '../services/githubService';
+import { fetchUsersByCriteria } from '../services/fetcheDataUser';
 
 
 
@@ -17,9 +18,11 @@ function SearchInput() {
         setError(false);
         setuserData(null)
 
+        const query = `location:${username}+repos:>10`;
+
         try{
-            const data = await fetchUserData(username);
-            setuserData(data);
+            const userData = await fetchUsersByCriteria(query);
+            setuserData(userData.items);
 
         } catch(error){
             setError(true);
@@ -46,11 +49,24 @@ function SearchInput() {
             {error && <p>Looks like we cant find the user</p>}
             {userData && (
                 <div>
-                    <img src={userData.avatar_url} alt={userData.loggin} />
-                    <h2 className='text-center text-xl'>{userData.name || 'No Name'}</h2>
-                    <a href="{userData.html_url}" target='_blank' className='text-blue-600 text-center'>Profile Link !</a>
+                    {userData.map((user)=>{
+                        return(
+
+                            <div key={user.id}>
+                                <img src={user.avatar_url} alt={user.login} />
+                                <h2>{user.name || 'No Name'}</h2>
+                                <a href={user.html_url}>Link to the profile </a>
+                            </div>
+
+                        )
+                       
+                        
+                    })}
                 </div>
-            )}
+            )
+                
+
+            }
         </div>
     </div>
   )
